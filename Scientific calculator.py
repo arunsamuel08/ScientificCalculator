@@ -11,9 +11,9 @@ class CalculatorWindow:
         # setting the size 
         master.geometry('500x500')
         # disabling the resizing of the window
-        master.resizable(0.0)
+        master.resizable(0,0)
 
 if __name__ == '__main__':
-master = tk.Tk()
-app = CalculatorWindow(master)
-master.mainloop()
+    master = tk.Tk()
+    app = CalculatorWindow(master)
+    master.mainloop()
