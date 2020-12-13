@@ -17,3 +17,4 @@ if __name__ == '__main__':
     master = tk.Tk()
     app = CalculatorWindow(master)
     master.mainloop()
+    
