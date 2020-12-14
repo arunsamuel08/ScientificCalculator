@@ -9,9 +9,14 @@ class CalculatorWindow:
         # adding title name
         master.title('Scientific Calculator')
         # setting the size 
-        master.geometry('500x500')
+        master.geometry('500x500+0+0')
         # disabling the resizing of the window
         master.resizable(0,0)
+        # giving background colour
+        master.configure(background = "black")
+
+        
+
 
 if __name__ == '__main__':
     master = tk.Tk()
