@@ -1,6 +1,6 @@
 # importing modules
 from tkinter import*
-#from tkinter import messagebox
+from tkinter import messagebox
 #import math as m
 
 class CalculatorWindow:
@@ -19,6 +19,25 @@ class CalculatorWindow:
         calc = Frame(master)
         calc.grid()
 
+        #============================= Menus =================================  
+        # class method to add the code to exit the application
+        def iExit():
+            iExit = messagebox.askyesno("Scientific Calculator", "Do you want to exit?")
+            if iExit > 0:
+                master.destroy()
+                return
+        # class method  for the standard button
+        def Standard():
+            master.resizable(0,0)
+            master.geometry("480x568+0+0")
+            return
+
+        # class method for scientific button and toggling purpose
+        def Scientific():
+            master.resizable(0,0)
+            master.geometry("944x568+0+0")
+            return
+    
         # making menus
         menubar = Menu(calc)
 
@@ -26,13 +45,13 @@ class CalculatorWindow:
         filemenu = Menu(menubar, tearoff = 0)
         menubar.add_cascade(label = "File", menu=filemenu)
         # added the toggle button for standard calc 
-        filemenu.add_command(label = "Standard")
+        filemenu.add_command(label = "Standard", command = Standard)
         # added the toggle button for scientific calc
-        filemenu.add_command(label = "Scientific")
+        filemenu.add_command(label = "Scientific", command = Scientific)
         # added in a separator
         filemenu.add_separator()
         # added a exit option.
-        filemenu.add_command(label = "Exit")
+        filemenu.add_command(label = "Exit", command = iExit)
 
         # command used to call this file menu
         master.config(menu=menubar)
