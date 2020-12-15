@@ -73,9 +73,30 @@ class CalculatorWindow:
 
         master.config(menu=menubar)
 
+        # ================================= Display ==================================
+
+        self.input_field = Entry(calc, font = ('arial', 20, 'bold'), bg='#101820',
+        bd=30, width=28, justify=RIGHT, fg='#f2aa4c')
+        self.input_field.grid(row=0, column=0, pady=1, columnspan=4)
+        self.input_field.insert(0, "0")
         
+        # ================================ Buttons ====================================
+
+        numberpad = "789456123"
+        i = 0
+        btn = []
+        for j in range (2,5):
+            for k in range(3):
+                btn.append(Button(calc, width=6, height=2, font = ('arial', 20, 'bold'),
+                 bd=4, text = numberpad[i], bg = '#101820', fg='#f2aa4c' ))
+                btn[i].grid(row=j , column=k, pady=1)
+                i+=1
 
 
+
+
+
+        
 
 if __name__ == '__main__':
     master = Tk()
