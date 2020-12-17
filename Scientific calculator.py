@@ -80,7 +80,7 @@ class CalculatorWindow:
         self.input_field.grid(row=0, column=0, pady=1, columnspan=4)
         self.input_field.insert(0, "0")
         
-        # ================================ Buttons ====================================
+        # ================================ Numberpad ====================================
 
         numberpad = "789456123"
         i = 0
@@ -91,12 +91,52 @@ class CalculatorWindow:
                  bd=4, text = numberpad[i], bg = '#101820', fg='#f2aa4c' ))
                 btn[i].grid(row=j , column=k, pady=1)
                 i+=1
-
-
-
-
-
         
+        # ============================= Operation buttons ===================================
+        btnclear = Button(calc, text=chr(67), width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnclear.grid(row=1, column=0, pady=1)
+
+        btnclear_all = Button(calc, text=chr(67) + chr(69), width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnclear_all.grid(row=1, column=1, pady=1)
+
+        btnsqrt = Button(calc, text='√', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnsqrt.grid(row=1, column=2, pady=1)
+
+        btnplus = Button(calc, text='+', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnplus.grid(row=1, column=3, pady=1)
+
+        btnminus = Button(calc, text='-', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnminus.grid(row=2, column=3, pady=1)
+
+        btnmultiply = Button(calc, text='x', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnmultiply.grid(row=3, column=3, pady=1)
+
+        btndivide = Button(calc, text=chr(247), width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btndivide.grid(row=4, column=3, pady=1)
+
+        btnzero = Button(calc, text='0', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnzero.grid(row=5, column=0, pady=1)
+
+        btnpoint = Button(calc, text='.', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnpoint.grid(row=5, column=1, pady=1)
+
+        btnplusminus = Button(calc, text=chr(177), width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnplusminus.grid(row=5, column=2, pady=1)
+
+        btnequals = Button(calc, text='=', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnequals.grid(row=5, column=3, pady=1)
+
 
 if __name__ == '__main__':
     master = Tk()
