@@ -98,7 +98,7 @@ class CalculatorWindow:
         btnclear.grid(row=1, column=0, pady=1)
 
         btnclear_all = Button(calc, text=chr(67) + chr(69), width=6, height=2, font=('arial', 20,'bold'),
-        bd=4, bg='#f2aa4c', fg='#101820')
+        bd=4, bg='Orange', fg='#101820')
         btnclear_all.grid(row=1, column=1, pady=1)
 
         btnsqrt = Button(calc, text='√', width=6, height=2, font=('arial', 20,'bold'),
@@ -136,6 +136,102 @@ class CalculatorWindow:
         btnequals = Button(calc, text='=', width=6, height=2, font=('arial', 20,'bold'),
         bd=4, bg='#f2aa4c', fg='#101820')
         btnequals.grid(row=5, column=3, pady=1)
+
+        # =============================== Scientific ===================================
+
+        labelsctf = Label(calc, text = 'Scientific Calculator', font=('helvetica', 30, 'bold'),
+        justify=RIGHT)
+        labelsctf.grid(row=0, column=4, columnspan=4)
+
+        btnpi = Button(calc, text='π', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnpi.grid(row=1, column=4, pady=1)
+
+        btnCos = Button(calc, text='cos', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnCos.grid(row=1, column=5, pady=1)
+
+        btntan = Button(calc, text='tan', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btntan.grid(row=1, column=6, pady=1)
+
+        btnsin = Button(calc, text='sin', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnsin.grid(row=1, column=7, pady=1)
+
+        # ============================================================================
+
+        btn2pi = Button(calc, text='2π', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btn2pi.grid(row=2, column=4, pady=1)
+
+        btnCosh = Button(calc, text='cosh', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnCosh.grid(row=2, column=5, pady=1)
+
+        btntanh = Button(calc, text='tanh', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btntanh.grid(row=2, column=6, pady=1)
+
+        btnsinh = Button(calc, text='sinh', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnsinh.grid(row=2, column=7, pady=1)
+
+        # ============================================================================
+
+        btnlog = Button(calc, text='log', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnlog.grid(row=3, column=4, pady=1)
+
+        btnExp = Button(calc, text='Exp', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnExp.grid(row=3, column=5, pady=1)
+
+        btnMod = Button(calc, text='Mod', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnMod.grid(row=3, column=6, pady=1)
+
+        btnE = Button(calc, text='e', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnE.grid(row=3, column=7, pady=1)
+
+        # ==============================================================================
+
+        btnlog2 = Button(calc, text='log2', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnlog2.grid(row=4, column=4, pady=1)
+
+        btndeg = Button(calc, text='deg', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btndeg.grid(row=4, column=5, pady=1)
+
+        btnacosh = Button(calc, text='acosh', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnacosh.grid(row=4, column=6, pady=1)
+
+        btnasinh = Button(calc, text='asinh', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#f2aa4c', fg='#101820')
+        btnasinh.grid(row=4, column=7, pady=1)
+
+        # ==================================================================================
+
+        btnlog10 = Button(calc, text='log10', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnlog10.grid(row=5, column=4, pady=1)
+
+        btnlog1p = Button(calc, text='log1p', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnlog1p.grid(row=5, column=5, pady=1)
+
+        btnexpm1 = Button(calc, text='expm1', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btnexpm1.grid(row=5, column=6, pady=1)
+
+        btn1gamma = Button(calc, text='1gamma', width=6, height=2, font=('arial', 20,'bold'),
+        bd=4, bg='#101820', fg='#f2aa4c')
+        btn1gamma.grid(row=5, column=7, pady=1)
+
+        # ====================================================================================
 
 
 if __name__ == '__main__':
